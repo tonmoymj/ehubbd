@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main-header {
+    background: #fff;
+    padding: 12px 3%;
+    border-bottom: 1px solid #f0f0f0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-logo {
+    height: 115px;
+    width: auto;
+    object-fit: contain;
+}
+
+.nav-links-center {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #444;
+    font-size: 14px;
+    font-weight: 500;
+    padding-bottom: 5px;
+    transition: 0.3s;
+}
+
+.nav-item:hover, .nav-item.active {
+    color: #f36f21;
+}
+
+.nav-item.active {
+    border-bottom: 2px solid #f36f21;
+}
+
+.nav-search {
+    display: flex;
+    align-items: center;
+    background: #f1f3f4;
+    padding: 6px 15px;
+    border-radius: 25px;
+    margin-left: 10px;
+}
+
+.nav-search input {
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 160px;
+    font-size: 13px;
+}
+
+.header-right {
+    display: flex;
+    gap: 22px;
+    align-items: center;
+    color: #555;
+}
+
+.text-only-item {
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.text-only-item:hover {
+    color: #f36f21;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.profile-img {
+    width: 32px;
+    height: 32px;
+    background: #e0e0e0;
+    border-radius: 50%;
+}
+
+.content-wrapper {
+    padding: 40px 3%;
+    min-height: calc(100vh - 200px); /* ফুটার নিচে রাখার জন্য */
+}
+
+.marketplace-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.title-section h1 { font-size: 24px; color: #222; margin-bottom: 5px; }
+.title-section p { font-size: 14px; color: #888; }
+
+.categories-section {
+    display: flex;
+    gap: 20px;
+}
+
+.filter-link {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: #666;
+    transition: 0.3s;
+    padding: 5px 0;
+}
+
+.filter-link:hover, .filter-link.active {
+    color: #1a2b4a;
+}
+
+.filter-link.active {
+    font-weight: 700;
+    border-bottom: 2px solid #1a2b4a;
+}
+
+.main-grid-layout {
+    display: flex;
+    gap: 25px;
+    margin-top: 20px;
+    align-items: flex-start;
+}
+
+.banner-section {
+    flex: 0 0 450px;
+}
+
+.banner-container {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+}
+
+.full-banner-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.services-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.service-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.service-img-container { position: relative; }
+.service-main-img { width: 100%; height: 150px; object-fit: cover; }
+
+.category-tag {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: #fff;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: bold;
+    color: #1a2b4a;
+}
+
+.card-details { padding: 12px; }
+
+.user-info { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.user-avatar { width: 22px; height: 22px; border-radius: 50%; }
+.user-name { font-size: 12px; font-weight: 600; color: #333; }
+.user-name i { color: #3498db; font-size: 10px; }
+
+.service-title { font-size: 13px; font-weight: 600; color: #222; margin-bottom: 5px; height: 36px; overflow: hidden; }
+.rating { font-size: 11px; color: #f1c40f; }
+
+.card-divider { border: 0; border-top: 1px solid #f5f5f5; margin: 10px 0; }
+
+.card-footer { display: flex; justify-content: space-between; align-items: center; }
+.delivery-time { font-size: 11px; color: #888; }
+
+.starting-text { font-size: 8px; color: #999; display: block; }
+.price-amount { font-size: 14px; font-weight: bold; color: #1a2b4a; }
+
+/* ********** FOOTER PART STARTS HERE********** */
+
+.main-footer {
+    background: #fff;
+    padding: 30px 3%;
+    border-top: 1px solid #f0f0f0;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.main-footer p {
+    font-size: 13px;
+    color: #888;
+}
+
+.footer-links {
+    display: flex;
+    gap: 30px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #555;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #f36f21; /* হোভার করলে নেভবারের মতো কমলা হবে */
+}
+
+/* ********** FOOTER PART ENDS HERE (নতুন ফুটার CSS এখানে শেষ) ********** */
