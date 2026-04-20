@@ -21,7 +21,7 @@ CREATE TABLE IF NOT EXISTS profiles (
     email TEXT,
     phone TEXT,
     avatar_url TEXT DEFAULT '/images/cp 1.avif',
-    role TEXT DEFAULT 'user' CHECK (role IN ('user', 'entrepreneur')),
+    role TEXT DEFAULT 'user' CHECK (role IN ('user', 'entrepreneur', 'admin')),
     -- Entrepreneur-specific fields
     business_name TEXT,
     category TEXT,
@@ -85,7 +85,7 @@ CREATE TRIGGER update_services_modtime
 -- 3. Feed Posts Table
 CREATE TABLE IF NOT EXISTS feed_posts (
     id SERIAL PRIMARY KEY,
-    user_id UUID REFERENCES auth.users ON DELETE CASCADE NOT NULL,
+    user_id UUID REFERENCES profiles(id) ON DELETE CASCADE NOT NULL,
     content TEXT NOT NULL,
     image TEXT,
     likes_count INT DEFAULT 0,
